@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-title>
-      Blank
+      Voting Sistem
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,7 +14,36 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div className="ion-text-center">
+      <ion-icon name="person" size="large" color="success"></ion-icon>
+      
+      <div *ngIf="error">
+
+        <ion-text color="danger">
+          {{ message }}
+        </ion-text>
+      </div>
+      
+      <ion-item class="ion-margin">
+        <ion-label> <ion-icon name="mail-outline" size="large" color="success"></ion-icon> </ion-label>
+        <ion-input type="email" [(ngModel)]="email">
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="ion-margin">
+        <ion-label> <ion-icon name="key" size="large" color="success"></ion-icon></ion-label>
+        <ion-input type="password" [(ngModel)]="password">
+        </ion-input>
+      </ion-item>
+
+      <ion-button class="ion-margin" expand="block" shape="round" (click)="login()" color='success'>
+        Login
+      </ion-button>
+
+      <ion-button class="ion-margin" expand="block" shape="round" routerDirection="forward" (click)="goAnOtherPage()"
+        color='warning'>
+        Register
+      </ion-button>
+    </div>
   </div>
 </ion-content>

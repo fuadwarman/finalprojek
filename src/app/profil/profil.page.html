@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Profil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div [ngStyle]="{textAlign : 'center', marginTop: '20px'}">
+    <img src="assets/profil.png" [ngStyle]="{width: '100px',height: '100px'}" />
+
+
+        <div>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Nama : {{data.name}}</ion-label>
+                </ion-item>
+            </ion-list>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Email : {{data.email}}</ion-label>
+                </ion-item>
+            </ion-list>
+        </div>
+
+</div>
+
+</ion-content>
